@@ -7,7 +7,7 @@ const QuestionForm = ({ questions, onGoBack }) => {
   const [isBuffering, setIsBuffering] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsBuffering(false), 10000);
+    const timer = setTimeout(() => setIsBuffering(false), 5000);
     return () => clearTimeout(timer);
   }, [currentQuestionIndex]);
 
@@ -37,7 +37,7 @@ const QuestionForm = ({ questions, onGoBack }) => {
     <div>
       {isBuffering ? (
         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 max-w-xl mx-auto">
-          <p>Prepare yourself, the next question will appear in 10 seconds...</p>
+          <p>Prepare yourself, the next question will appear in 5 seconds...</p>
         </div>
       ) : (
         <QuestionCard
