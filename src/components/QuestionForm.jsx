@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import QuestionCard from './QuestionCard';
+import React, { useState, useEffect } from "react";
+import QuestionCard from "./QuestionCard";
 
 const QuestionForm = ({ questions, onGoBack }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -42,6 +42,7 @@ const QuestionForm = ({ questions, onGoBack }) => {
       ) : (
         <QuestionCard
           question={questions[currentQuestionIndex]}
+          questionNumber={currentQuestionIndex + 1}
           onSubmit={handleNextQuestion}
         />
       )}
