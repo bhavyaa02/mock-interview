@@ -61,7 +61,7 @@ const InterviewDetails = () => {
 
         <div className="space-y-4 max-h-96 overflow-y-auto pb-8">
           {interviewDetails.questions.map((q, index) => (
-            <div key={index} className="bg-white border border-blue-700 shadow-xl hover:bg-blue-100 rounded-lg p-6 transform transition duration-300 hover:scale-102 overflow-x-auto">
+            <div key={index} className="bg-white shadow-xl hover:bg-blue-100 rounded-lg p-6 transform transition duration-300 hover:scale-102 overflow-x-auto">
               <div className="bg-gray-100 p-4 rounded-lg shadow-inner mb-4 min-w-[300px]">
                 <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
               </div>
