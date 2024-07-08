@@ -1,7 +1,9 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MockInterview from './pages/MockInterview';
-import HistoryComponent from './pages/HistoryComponent'; // Adjust the path as per your directory structure
+import HistoryComponent from './pages/HistoryComponent';
+import InterviewDetails from './pages/InterviewDetails'; // Import the new component
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<MockInterview />} />
           <Route path="/history" element={<HistoryComponent />} />
-          {/* Add more routes as needed */}
+          <Route path="/interview-details/:interviewId" element={<InterviewDetails />} /> {/* Add the new route */}
         </Routes>
       </div>
     </Router>
